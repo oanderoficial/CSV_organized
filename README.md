@@ -1,3 +1,3 @@
-<h1>Organizar Arquivos CSV </h1>
+<h1>Organizar dados CSV </h1>
 
-<p>Organizar arquivos CSV em uma planilha legível </p>
+<p>Organizar dados de um arquivo CSV em uma planilha legível </p>
