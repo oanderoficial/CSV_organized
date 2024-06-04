@@ -3,13 +3,6 @@
 <p>Organizar dados de um arquivo CSV em uma planilha legível </p>
 
 <strong> Importando bibliotecas </strong>
-
-```python
-
-import pandas as pd
-import openpyxl
-```
-
 <p>Instalação:</p>
 
 ```
@@ -18,6 +11,13 @@ pip install pandas
 ```
 pip install openpyxl
 ```
+
+```python
+
+import pandas as pd
+import openpyxl
+```
+
 
 
 <strong> Leitura do CSV </strong>
