@@ -18,6 +18,10 @@ pip install tkinter
 
 import pandas as pd
 import openpyxl
+from tkinter import *
+import tkinter.messagebox as messagebox
+from tkinter import ttk
+from tkinter import filedialog
 ```
 
 
