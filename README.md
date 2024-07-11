@@ -29,8 +29,12 @@ from tkinter import filedialog
 <strong> Leitura do CSV </strong>
 
 ```python 
-arquivo = input("Digite o caminho do arquivo gerado pelo ServiceNow >>>")
-dados = pd.read_csv(arquivo, encoding="latin-1")
+  def run (self):
+    # Leitura do CSV
+        #arquivo = input("Digite o caminho do arquivo gerado pelo ServiceNow >>>")
+        try:
+            file_path = filedialog.askopenfilename(title="Digite o caminho do arquivo gerado pelo ServiceNow >>>", filetypes=[("csv", "*.csv")])
+            dados = pd.read_csv(file_path, encoding="latin-1")
 ```
 
 <strong> Criação da pasta de trabalho e planilha </strong>
@@ -53,7 +57,16 @@ for row_num, row in dados.iterrows():
 ```
 <strong> Salvamento do arquivo Excel </strong> 
 ```python 
-job.save('arquivo_organizado.xlsx')
+  job.save('arquivo_organizado.xlsx')
+            print("Arquivo Excel organizado com sucesso!")
+            messagebox.showinfo('Sucesso, dados organizados com sucesso!')
+        except:
+            messagebox.showerror("Erro", f"Ocorreu um erro ao carregar o arquivo csv:")
+             
+```
 
-print("Arquivo Excel organizado com sucesso!")
+```python
+if __name__ == "__main__":
+    run = MainExcel()
+    run.run()
 ```
